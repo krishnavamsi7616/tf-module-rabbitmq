@@ -7,7 +7,7 @@ data "aws_secretsmanager_secret_version" "secret" {
 }
 
 data "aws_ami" "ami" {
-  executable_users = ["self"]
+ // executable_users = ["self"]
   most_recent      = true
   name_regex       = "base-image-with-ansible-installed"
   owners           = ["self"]
