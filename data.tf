@@ -7,10 +7,10 @@ data "aws_secretsmanager_secret_version" "secret" {
 }
 
 data "aws_ami" "ami" {
- // executable_users = ["self"]
-  most_recent      = true
-  name_regex       = "base-image-with-ansible-installed"
-  owners           = ["self"]
+  //executable_users = ["self"]
+  most_recent = true
+  name_regex  = "base-image-with-ansible-installed"
+  owners      = ["self"]
 }
 
 data "aws_ec2_spot_price" "spot_price" {
@@ -22,6 +22,8 @@ data "aws_ec2_spot_price" "spot_price" {
     values = ["Linux/UNIX"]
   }
 }
+
+
 
 data "aws_subnet" "selected" {
   id = var.PRIVATE_SUBNET_IDS[0]
