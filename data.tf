@@ -23,8 +23,6 @@ data "aws_ec2_spot_price" "spot_price" {
   }
 }
 
-
-
 data "aws_subnet" "selected" {
   id = var.PRIVATE_SUBNET_IDS[0]
 }
